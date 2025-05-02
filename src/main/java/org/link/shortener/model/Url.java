@@ -1,32 +1,44 @@
 package org.link.shortener.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.time.LocalDateTime;
 
+@Entity
 public class Url {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    @SequenceGenerator(
+            name = "id_sequence",
+            sequenceName = "id_sequence",
+            allocationSize = 1,
+            initialValue = 160
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "id_sequence"
+    )
+    private Long id;
 
     private String link;
 
     @Column(unique = true)
     private String code;
-    private long useCount;
+    private Long useCount;
     private final LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public Url(String link, String code, long useCount, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public Url(String link, String code, Long useCount, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.link = link;
         this.code = code;
         this.useCount = useCount;
         this.createdAt = createdAt;
         this.updatedAt = updatedAt;
+    }
+
+    public Url() {
+        this.createdAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
     }
 
     public String getLink() {
@@ -37,7 +49,7 @@ public class Url {
         return code;
     }
 
-    public long getUseCount() {
+    public Long getUseCount() {
         return useCount;
     }
 
@@ -49,7 +61,7 @@ public class Url {
         return updatedAt;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
@@ -61,7 +73,7 @@ public class Url {
         this.updatedAt = updatedAt;
     }
 
-    public void setUseCount(long useCount) {
+    public void setUseCount(Long useCount) {
         this.useCount = useCount;
     }
 

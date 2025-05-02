@@ -3,13 +3,13 @@ package org.link.shortener.model;
 import java.time.LocalDateTime;
 
 public class UrlResponseDTO {
-    private long id;
+    private Long id;
     private String url;
     private String code;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
 
-    public UrlResponseDTO(long id, String url, String code, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public UrlResponseDTO(Long id, String url, String code, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.url = url;
         this.code = code;
@@ -18,4 +18,19 @@ public class UrlResponseDTO {
     }
 
 
+    public String getUrl() {
+        return url;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
 }

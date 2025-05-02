@@ -3,14 +3,14 @@ package org.link.shortener.model;
 import java.time.LocalDateTime;
 
 public class StatisticsDTO {
-    private long id;
+    private Long id;
     private String url;
     private String code;
     private LocalDateTime createdAt;
     private LocalDateTime updatedAt;
-    private long useCount;
+    private Long useCount;
 
-    public StatisticsDTO(long id, String url, String code, LocalDateTime createdAt, LocalDateTime updatedAt, long useCount) {
+    public StatisticsDTO(Long id, String url, String code, LocalDateTime createdAt, LocalDateTime updatedAt, Long useCount) {
         this.id = id;
         this.url = url;
         this.code = code;
@@ -20,4 +20,23 @@ public class StatisticsDTO {
     }
 
 
+    public String getUrl() {
+        return url;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public Long getUseCount() {
+        return useCount;
+    }
 }
