@@ -60,7 +60,7 @@ This application allows users to shorten long URLs into small shareable codes. I
    - PostgreSQL
 
 2. **Clone the Repository:**
-   ```
+   ```bash
 git clone git@github.com:HamdaouiAbdelhake/LinkShortener.git
 cd LinkShortener
    ```
@@ -69,7 +69,7 @@ cd LinkShortener
    Update the PostgreSQL connection properties in `src/main/resources/application.properties` if needed.
 
 4. **Install Dependencies:**
-   ```
+   ```bash
 mvn clean install
    ```
 
@@ -108,7 +108,7 @@ The application exposes endpoints under `/api`:
 ## Building and Running
 
 Run the application using Maven:
-```
+```bash
 mvn spring-boot:run
 ```
 
@@ -116,7 +116,7 @@ The server will start at [http://localhost:8080](http://localhost:8080).
 
 ## Project Structure
 
-```
+```bash
 LinkShortener/
 ├── src/
 │   ├── main/
