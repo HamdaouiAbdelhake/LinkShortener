@@ -22,7 +22,7 @@ public class Url {
 
     private String link;
 
-    @Column(unique = true)
+    @Column(unique = true , length = 6)
     private String code;
     private Long useCount;
     private final LocalDateTime createdAt;
