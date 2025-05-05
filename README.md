@@ -115,49 +115,13 @@ mvn spring-boot:run
 
 The server will start at [http://localhost:8080](http://localhost:8080).
 
-## Project Structure
 
-```bash
-LinkShortener/
-├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── org/link/shortener/
-│   │   │       ├── controller/
-│   │   │       │   ├── ApiController.java
-│   │   │       │   └── WebController.java
-│   │   │       ├── exception/
-│   │   │       │   ├── ErrorDetails.java
-│   │   │       │   ├── GlobalExceptionHandler.java
-│   │   │       │   └── UrlNotFoundException.java
-│   │   │       ├── model/
-│   │   │       │   ├── StatisticsDTO.java
-│   │   │       │   ├── Url.java
-│   │   │       │   ├── UrlRequestDTO.java
-│   │   │       │   └── UrlResponseDTO.java
-│   │   │       ├── repository/
-│   │   │       │   └── UrlRepository.java
-│   │   │       ├── service/
-│   │   │       │   └── UrlShortenerService.java
-│   │   │       └── utils/
-│   │   │           └── UtilityClass.java
-│   │   └── resources/
-│   │       ├── application.properties
-│   │       └── templates/
-│   │           ├── base.ftl
-│   │           └── fragments/
-│   │               ├── error.ftl
-│   │               ├── form.ftl
-│   │               ├── shortened.ftl
-│   │               └── stats-form.ftl
-└── pom.xml
-```
-
-## Swagger Documentation
+## Swagger API Documentation
 
 Swagger UI is available at [http://localhost:8080/api-docs](http://localhost:8080/api-docs) for interactive API documentation and testing.
 
 ## License
 
-Specify your license or refer to your LICENSE file.
+This project is licensed under the GNU Lesser General Public License (LGPL) version 3.  
+For details, see the [LICENSE.md](./LICENSE.md) file.
 ```
