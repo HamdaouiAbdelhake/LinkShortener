@@ -64,7 +64,7 @@
                     <div class="features-icons-item mx-auto mb-0 mb-lg-3">
                         <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
                         <h3>Easy Integration</h3>
-                        <p class="lead mb-0">Integrate our service seamlessly into your applications.</p>
+                        <p class="lead mb-0">Integrate our service seamlessly into your applications using our <a href="/api-docs">API</a>.</p>
                     </div>
                 </div>
             </div>
